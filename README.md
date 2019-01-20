@@ -40,7 +40,7 @@ For React projects, extend `eslint-config-blvd/react`.
 
 [Prettier](https://prettier.io/) is an automated code formatter for JavaScript, TypeScript, and other languages.
 
-This TSLint config works alongside Prettier, too. To use it, install Prettier as well as `tslint-config-prettier` to your project.
+This eslint config works alongside Prettier, too. To use it, install Prettier as well as `eslint-config-prettier` to your project.
 
 ```bash
 yarn add --dev prettier eslint-config-prettier
