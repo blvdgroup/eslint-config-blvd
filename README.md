@@ -75,7 +75,7 @@ Also include `eslint-config-prettier/react` for React projects.
 
 ```json
 {
-  "extends": ["eslint-config-blvd", "eslint-config-prettier", "eslint-config-prettier/react"],
+  "extends": ["eslint-config-blvd/react", "eslint-config-prettier", "eslint-config-prettier/react"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
