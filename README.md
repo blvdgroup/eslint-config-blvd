@@ -1,0 +1,84 @@
+# eslint-config-blvd
+
+> ✨ An ESLint config that conforms to the blvd [JavaScript/TypeScript styleguide](https://github.com/blvdgroup/guidelines).
+
+## Installation
+
+Install `eslint` and `eslint-config-blvd` using yarn:
+
+```bash
+yarn add --dev eslint eslint-config-blvd
+```
+
+or, for npm:
+
+```bash
+npm install --save-dev eslint eslint-config-blvd
+```
+
+## Usage
+
+In your `.eslintrc` file, extend `eslint-config-blvd`.
+
+```json
+{
+  "extends": "eslint-config-blvd"
+}
+```
+
+### React rules
+
+For React projects, extend `eslint-config-blvd/react`.
+
+```json
+{
+  "extends": ["eslint-config-blvd/react"]
+}
+```
+
+### Prettier
+
+[Prettier](https://prettier.io/) is an automated code formatter for JavaScript, TypeScript, and other languages.
+
+This TSLint config works alongside Prettier, too. To use it, install Prettier as well as `tslint-config-prettier` to your project.
+
+```bash
+yarn add --dev prettier eslint-config-prettier
+```
+
+Create a `.prettierrc` file. Then add the following configs. This should make Prettier automatically format your code based
+on the blvd guidelines.
+
+```json
+{
+  "semi": false,
+  "tabWidth": 2,
+  "printWidth": 140,
+  "singleQuote": true,
+  "trailingComma": "none"
+}
+```
+
+Then include `eslint-config-prettier` in your project. **IMPORTANT:** You must add `eslint-config-prettier` last in the `extends` array!
+
+```json
+{
+  "extends": ["eslint-config-blvd", "eslint-config-prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
+```
+
+Also include `eslint-config-prettier/react` for React projects.
+
+```json
+{
+  "extends": ["eslint-config-blvd", "eslint-config-prettier", "eslint-config-prettier/react"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
+```

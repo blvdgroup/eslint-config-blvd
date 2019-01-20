@@ -1,0 +1,7 @@
+{
+  "extends": ["./index.js", "eslint-config-prettier", "eslint-config-prettier/react"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
