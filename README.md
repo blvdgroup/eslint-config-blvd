@@ -43,7 +43,7 @@ For React projects, extend `eslint-config-blvd/react`.
 This eslint config works alongside Prettier, too. To use it, install Prettier as well as `eslint-config-prettier` to your project.
 
 ```bash
-yarn add --dev prettier eslint-config-prettier
+yarn add --dev prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 Create a `.prettierrc` file. Then add the following configs. This should make Prettier automatically format your code based
