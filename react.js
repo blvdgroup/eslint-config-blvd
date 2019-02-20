@@ -1,1 +1,4 @@
-module.exports = require('./lib/react')
+module.exports = {
+  extends: ['eslint-config-airbnb', './rules/base', './rules/typescript', './rules/react'].map(require.resolve),
+  rules: {}
+}

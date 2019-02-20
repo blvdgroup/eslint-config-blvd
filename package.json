@@ -6,9 +6,7 @@
   "files": [
     "index.js",
     "react.js",
-    "lib",
-    "README.md",
-    "LICENSE"
+    "rules"
   ],
   "repository": {
     "type": "git",
