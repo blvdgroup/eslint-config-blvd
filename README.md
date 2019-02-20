@@ -63,7 +63,7 @@ Then include `eslint-config-prettier` in your project. **IMPORTANT:** You must a
 
 ```json
 {
-  "extends": ["eslint-config-blvd", "eslint-config-prettier"],
+  "extends": ["blvd", "prettier", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
@@ -75,7 +75,13 @@ Also include `eslint-config-prettier/react` for React projects.
 
 ```json
 {
-  "extends": ["eslint-config-blvd/react", "eslint-config-prettier", "eslint-config-prettier/react"],
+  "extends": [
+    "blvd/react",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react",
+    "plugin:prettier/recommended"
+  ],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
