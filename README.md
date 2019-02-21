@@ -59,11 +59,11 @@ on the blvd guidelines.
 }
 ```
 
-Then include `eslint-config-prettier` in your project. **IMPORTANT:** You must add `eslint-config-prettier` last in the `extends` array!
+Then include `eslint-config-prettier` in your project. **IMPORTANT:** You must add `prettier` extends after extending the `blvd` config!
 
 ```json
 {
-  "extends": ["blvd", "prettier", "plugin:prettier/recommended"],
+  "extends": ["blvd", "prettier", "prettier/@typescript-eslint", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
@@ -75,13 +75,7 @@ Also include `eslint-config-prettier/react` for React projects.
 
 ```json
 {
-  "extends": [
-    "blvd/react",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/react",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["blvd/react", "prettier", "prettier/@typescript-eslint", "prettier/react", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
