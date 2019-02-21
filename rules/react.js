@@ -1,4 +1,4 @@
-// TypeScript
+// React
 // Overrides and custom rules for React projects.
 // Reference https://github.com/yannickcr/eslint-plugin-react
 
