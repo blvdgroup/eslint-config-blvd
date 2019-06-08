@@ -1,4 +1,5 @@
-// Base config
+// Base
+// Default configurations and extensions to the Airbnb ESLint config.
 
 module.exports = {
   env: {
@@ -15,6 +16,9 @@ module.exports = {
     // An additional trailing comma should not be used.
     // https://github.com/blvdgroup/guidelines/tree/master/languages/javascript#style
     'comma-dangle': ['error', 'never'],
+
+    // Disable multiline expressions and lines that start with `[` or `(`.
+    'no-unexpected-multiline': 'error',
 
     // Semicolons should not be used, except when strictly necessary.
     // https://github.com/blvdgroup/guidelines/tree/master/languages/javascript#style
