@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-blvd",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "An ESLint config that conforms to the blvd JavaScript/TypeScript styleguide.",
   "main": "index.js",
   "files": [
