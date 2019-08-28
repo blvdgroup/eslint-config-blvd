@@ -17,6 +17,9 @@ module.exports = {
     // https://github.com/blvdgroup/guidelines/tree/master/languages/javascript#style
     'comma-dangle': ['error', 'never'],
 
+    // Max line-length is 140.
+    'max-len': ['error', { code: 140, ignoreUrls: true }],
+
     // Disable multiline expressions and lines that start with `[` or `(`.
     'no-unexpected-multiline': 'error',
 

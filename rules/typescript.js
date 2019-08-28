@@ -3,7 +3,7 @@
 // Reference https://github.com/typescript-eslint/typescript-eslint
 
 module.exports = {
-  extends: ['plugin:@typescript-eslint/recommended', 'plugin:@typescript-eslint/eslint-recommended'],
+  extends: ['plugin:@typescript-eslint/eslint-recommended'],
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
@@ -11,14 +11,14 @@ module.exports = {
       parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
-
         // typescript-eslint specific options
         warnOnUnsupportedTypeScriptVersion: true
       },
       plugins: ['@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
-        'no-undef': 'off',
-        'no-unused-vars': 'off'
+        // Allow unused variables that starts with, or is `_`
+        '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }]
       }
     }
   ],
