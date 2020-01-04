@@ -13,7 +13,10 @@ module.exports = {
       },
       rules: {
         // We use TypeScript for typechecking, so no need to set up PropTypes.
-        'react/prop-types': 'off'
+        'react/prop-types': 'off',
+
+        // Cannot use `Component.displayName` pattern on class components in TS.
+        'react/static-property-placement': 'off'
       }
     }
   ],
