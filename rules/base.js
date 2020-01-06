@@ -23,6 +23,24 @@ module.exports = {
     // Disable multiline expressions and lines that start with `[` or `(`.
     'no-unexpected-multiline': 'error',
 
+    // Require or disallow a space immediately following the // or /* in a comment
+    // https://eslint.org/docs/rules/spaced-comment
+    'spaced-comment': [
+      'error',
+      'always',
+      {
+        line: {
+          exceptions: ['-', '+'],
+          markers: ['=', '!', '#region', '#endregion', '/'] // space here to support sprockets directives and typescript reference comments
+        },
+        block: {
+          exceptions: ['-', '+'],
+          markers: ['=', '!', '#region', '#endregion', ':', '::'], // space here to support sprockets directives and flow comment types
+          balanced: true
+        }
+      }
+    ],
+
     // Semicolons should not be used, except when strictly necessary.
     // https://github.com/blvdgroup/guidelines/tree/master/languages/javascript#style
     semi: ['error', 'never']
