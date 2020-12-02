@@ -36,6 +36,28 @@ For React projects, extend `eslint-config-blvd/react`.
 }
 ```
 
+### Using TypeScript
+
+To use `eslint-config-blvd` with TypeScript, you need to do a little additional setup to make `eslint-plugin-import` play well with TypeScript. First, install `eslint-import-resolver-typescript`.
+
+```bash
+# yarn
+yarn add --dev eslint-import-resolver-typescript
+```
+
+Then, on your `.eslintrc`:
+
+```js
+module.exports = {
+  // other configuration are omitted for brevity
+  settings: {
+    'import/resolver': {
+      typescript: {} // this loads <rootdir>/tsconfig.json to eslint
+    }
+  }
+}
+```
+
 ### Prettier
 
 [Prettier](https://prettier.io/) is an automated code formatter for JavaScript, TypeScript, and other languages.
