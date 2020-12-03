@@ -18,7 +18,16 @@ module.exports = {
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         // Allow unused variables that starts with, or is `_`
-        '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          { vars: 'all', args: 'after-used', ignoreRestSiblings: true, argsIgnorePattern: '^_', varsIgnorePattern: '^_' }
+        ],
+
+        // Override the base rules so to not clash with each other.
+        // https://github.com/typescript-eslint/typescript-eslint/issues/2540
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error', { functions: true, classes: true, variables: true }],
 
         // Allow `.ts` and `.tsx` extensions to be omitted
         'import/extensions': [
