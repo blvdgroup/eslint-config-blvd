@@ -7,13 +7,13 @@
 Install `eslint` and `eslint-config-blvd` using yarn:
 
 ```bash
-yarn add --dev eslint eslint-config-blvd
+yarn add --dev eslint eslint-config-blvd eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
 ```
 
 or, for npm:
 
 ```bash
-npm install --save-dev eslint eslint-config-blvd
+npm install --save-dev eslint eslint-config-blvd eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react
 ```
 
 ## Usage
